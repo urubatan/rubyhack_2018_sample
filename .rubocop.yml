@@ -1,0 +1,31 @@
+Style/StringLiterals:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 300
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/StderrPuts:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
