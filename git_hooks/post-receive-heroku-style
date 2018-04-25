@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Post Receive"
+while read oldrev newrev ref
+do
+  branch_received=`echo $ref | cut -d/ -f3`
+  echo "Deploying branch $branch_received"
+  /bin/bash --login -- <<__EOF__
+  cd /home/urubatan/projects/deployedapp
+  git fetch
+  git checkout -f $branch_received
+  git pull
+  yarn install
+  bundle install
+  rails db:migrate
+__EOF__
+done
+echo "Post Receive"
